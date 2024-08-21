@@ -1,0 +1,31 @@
+{
+  "name": "Gleam Dev",  
+  "build": {
+    "dockerfile": "Dockerfile",
+    "args": {
+      "GLEAM_VERSION": "1.2.0"
+    }
+  },
+  "customizations": {
+        "vscode": {
+          "extensions": [
+            "Gleam.Gleam",
+            "microsoft.docker"
+          ]
+        }
+   },
+   "features": {
+		"ghcr.io/devcontainers/features/common-utils:2": {
+			"installZsh": "true",
+			"username": "vscode",
+			"userUid": "1000",
+			"userGid": "1000",
+			"upgradePackages": "true"
+		},
+		"ghcr.io/devcontainers/features/git:1": {
+      "version": "latest",
+      "ppa": "false"
+    }
+  },
+  "remoteUser": "vscode"
+}
